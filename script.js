@@ -42,10 +42,16 @@ const deleteTask = (index) => {
 
 // Função que adiciona itens dentro do array
 const addTask = () => {
-    arrayTask.push({
-        task: input.value,
-        completed: false
-    })
+    if(input.value){
+        arrayTask.push({
+            task: input.value,
+            completed: false
+        })
+    }else {
+        alert('Por favor digite uma tarefa!')
+    }
+
+    input.value = ""
 
     showTask()
 }
@@ -60,10 +66,20 @@ const completeTask = (index) => {
 // Função para recarregar tarefas
 function reloadTasks(){
     let myTasks = localStorage.getItem('list')
-    
-    arrayTask = JSON.parse(myTasks)
 
-    showTask()
+    if(myTasks){
+        arrayTask = JSON.parse(myTasks)
+    
+        showTask()
+    }   
+}
+
+function addTaskEnter(keys){
+    if(keys.key === "Enter") {
+        addTask()
+    }
 }
 
 button.addEventListener('click', addTask)
+
+document.addEventListener('keypress', addTaskEnter)
