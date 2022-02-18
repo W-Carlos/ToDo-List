@@ -1,0 +1,139 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: rgb(74,149,245);
+    background: linear-gradient(87deg, rgba(74,149,245,1) 15%, rgba(39,65,255,1) 82%);
+}
+
+.container {
+    width: 33.81rem;
+    background-color: white;
+    background: #FFFFFF;
+    border-radius: 5px;
+
+    margin-top: 6.25rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6.25rem;
+    padding: 1.87rem 1.31rem;
+}
+
+#input-main {
+    width: 21.37rem;
+    height: 2.5rem;
+    padding: 0.68rem 1.25rem;
+    
+    border: 2px solid rgba(209, 211, 212, 0.4);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    outline: none;
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.93rem;
+    line-height: 1.12rem;
+}
+
+#add-button {
+    width: 8.12rem;
+    height: 2.5rem;
+    padding: 0 0.62rem;
+    background: #8052EC;
+    border-radius: 5px;
+
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.06rem;
+    line-height: 0.12rem;
+    color: #FFFFFF;
+
+    border: none;
+    cursor: pointer;
+    float: right;
+}
+
+#add-button:hover {
+    opacity: 0.8;
+}
+
+#add-button:active {
+    opacity: 0.6;
+}
+
+#tasks {
+    width: 100%;
+    list-style: none;
+    margin-top: 3.75rem;
+}
+
+.task-item {
+    padding: 1.25rem 2.81rem;
+    position: relative;
+    margin-top: 1.87rem;
+
+    background: #F2F2F2;
+    box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.31rem;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.93rem;
+    line-height: 1.12rem;
+
+    color: #000000;
+}
+
+.button-rocket {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2.5rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fa-rocket {
+    color: #4F0FC5;
+}
+
+.button-delete {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 2.5rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fa-trash {
+    color: #FF0000;
+}
+
+.task-item:hover .button-delete {
+    opacity: 1;
+}
+
+.task-item:hover .button-rocket {
+    opacity: 1;
+}
+
+.conclude {
+    background-color: rgb(12, 231, 12);
+    text-decoration: line-through;
+    color: #fff;
+}
