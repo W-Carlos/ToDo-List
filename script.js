@@ -48,7 +48,11 @@ const addTask = () => {
             completed: false
         })
     }else {
-        alert('Por favor digite uma tarefa!')
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Por favor, digite uma tarefa!',
+          })
     }
 
     input.value = ""
